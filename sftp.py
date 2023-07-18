@@ -11,9 +11,9 @@ def secondOption():
 	with pysftp.Connection(host=Hostname, username=Username, password=Password) as sftp:
 		print("Connection successfully established ... ")
 
-		remoteFilePath = input("Paste the path to the original file: ")
+		remoteFilePath = input("Paste the path of the original file (where the file is stored): ")
 
-		localFilePath = input("Paste the path to the destination file: ") 
+		localFilePath = input("Paste the path for the destination file (your local machine): ") 
 
 		# Use the get method to download a file
 		sftp.get(remoteFilePath, localFilePath)
@@ -28,10 +28,10 @@ def firstOption():
 	    
 	    print("Connection successfully established...")
 
-	    localFilePath = input("Paste the path to the original file: ")
+	    localFilePath = input("Paste the path of the original file: ")
 
 
-	    remoteFilePath = input("Paste the path to the destination file: ")
+	    remoteFilePath = input("Paste the path of the destination file: ")
 
 	    sftp.put(localFilePath, remoteFilePath)
 
